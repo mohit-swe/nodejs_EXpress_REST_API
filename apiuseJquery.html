@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title></title>
+ <link rel="stylesheet" type="text/css" href="style.css">
+ <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+</head>
+<body>
+
+<section>
+ <h1>WHAT DOES YOUR NAME SAY ABOUT YOUR PERSONALITY?</h1>
+        <p>  DONATION FOR SUPPORT:    PhonePay = vinodbahadur@ybl      GooglePay: vbthapa55@oksbi
+ Believe me all this money will be used to make more quality videos and to make my channel grow. So that I can always provide you awesome free videos :)﻿  </p>
+ <div class="centerDiv">
+  <div class="details">
+   <label>ENTER YOUR NAME</label><br>
+   <input type="text" name="" id="nameid">
+  </div>
+
+  <div class="imgdiv">
+   <img src="img.png" width="200" height="200" class="imgchange">
+  </div>
+
+  <button> Click Me</button>
+  
+ </div>
+</section>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<script>
+ $(document).ready(function(){
+  $('button').click(function(){
+   const name = $('#nameid').val();
+   alert(name);
+   $('.imgchange').attr('src',`https://joeschmoe.io/api/v1/${name}`);
+   const b = $('.imgchange');
+   console.log(b);
+
+  });
+ });
+</script>
+
+</body>
+</html>
+
+<!--
+
+
+
+
+let url=`https://joeschmoe.io/api/v1/${name}`;
+const but=document.getElementById('fetchUserDataBtn');
+but.addEventListener('click',fetchUserData);
+function fetchUserData()
+{let input=document.getElementById('nameid').value;
+fetch(url)
+.then(res=>res.json()).then(data=>{
+console.log(data);
+});
+}
+
+
+   -->

@@ -1,0 +1,25 @@
+{
+  "name": "rest",
+  "version": "1.0.0",
+  "description": "work my sql",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mohit",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "debug": "^4.3.1",
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "http-errors": "^1.8.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "mysql": "^2.18.1",
+    "os": "^0.1.1",
+    "path": "^0.12.7",
+    "routes": "^2.1.0"
+  }
+}

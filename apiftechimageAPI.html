@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Random Dog</title>
+  </head>
+  <body>
+    
+      <div id="image">
+        </div>
+        <input  type="text" placeholder=" enter image" id="fg"/> <br>
+      <button id="fetchUserDataBtn" > Random </button>
+    
+  </body>
+  <style>
+    body{
+      background-color:#f1e7b6;
+      display:flex;
+      justify-content:center;
+    }
+
+    #container{
+      width:50%;
+      height:680px;
+      background-color:#400082;
+    }
+    #image{
+      width:100%;
+      height:500px;
+      border:5px solid #fff;
+      box-sizing: border-box;
+    }
+
+    #button{
+      width:200px;
+      height:50px;
+      float:left;
+      margin-left:240px;
+      border:none;
+      outline:none;
+      border-radius: 10px;
+      cursor:pointer;
+      background-color:#fff;
+      color:#000;
+    }
+
+  </style>
+  <script>
+
+const btn=document.getElementById("fetchUserDataBtn");
+btn.addEventListner('click',work)
+const centerdiv = document.getElementById("image");
+
+
+let query=document.getElementById("id");
+
+function work()
+
+{      fetch("https://joeschmoe.io/api/v1")
+        .then((apidata) => {
+          return apidata.json();
+        })
+        .then((jsondata) => {
+          jsondata.map((val) => {
+            key = val.query;
+            let img = document.createElement("img");
+            img.src = `https://joeschmoe.io/api/v1=${key}`;
+            image.appendChild(img);
+            console.log(val.url);
+          });
+        });
+
+
+}
+
+
+
+
+
+// let response =  `https://joeschmoe.io/api/v1/${input}`;
+
+
+
+  </script>
+</html>
+
+<!--
+  let githubUser = await response.json();
+let img = document.createElement('img');
+  img.src = githubUser.avatar_url;
+  img.className = "promise-avatar-example";
+  document.body.append(img);
+  await new Promise((resolve, reject) => setTimeout(resolve, 3000));
+
+img.remove();
+return githubUser;
+-->
